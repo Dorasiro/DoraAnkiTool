@@ -99,12 +99,6 @@ namespace DoraAnkiTool.GUI
 
         private void ShowAnswer()
         {
-            // 回答表示中は何もしない
-            if (nextButton.Visible)
-            {
-                return;
-            }
-
             // 正解の場合、文字色を変える
             if (answer1Label.Text == nowQuestions[0].Mean)
             {
@@ -131,12 +125,7 @@ namespace DoraAnkiTool.GUI
             nextButton.Visible = true;
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            GetQuestion();
-        }
-
-        private void nextButton_Click(object sender, EventArgs e)
+        private void Next()
         {
             nextButton.Visible = false;
 
@@ -148,24 +137,75 @@ namespace DoraAnkiTool.GUI
             GetQuestion();
         }
 
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            GetQuestion();
+        }
+
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+            Next();
+        }
+
         private void answer1Label_Click(object sender, EventArgs e)
         {
-            ShowAnswer();
+            // 回答表示中はnextボタンと同じ挙動
+            if (nextButton.Visible)
+            {
+                Next();
+            }
+            else
+            {
+                ShowAnswer();
+            }
         }
 
         private void answer2Label_Click(object sender, EventArgs e)
         {
-            ShowAnswer();
+            // 回答表示中はnextボタンと同じ挙動
+            if (nextButton.Visible)
+            {
+                Next();
+            }
+            else
+            {
+                ShowAnswer();
+            }
         }
 
         private void answer3Label_Click(object sender, EventArgs e)
         {
-            ShowAnswer();
+            // 回答表示中はnextボタンと同じ挙動
+            if (nextButton.Visible)
+            {
+                Next();
+            }
+            else
+            {
+                ShowAnswer();
+            }
         }
 
         private void answer4Label_Click(object sender, EventArgs e)
         {
-            ShowAnswer();
+            // 回答表示中はnextボタンと同じ挙動
+            if (nextButton.Visible)
+            {
+                Next();
+            }
+            else
+            {
+                ShowAnswer();
+            }
+        }
+
+        private void MainForm_Click(object sender, EventArgs e)
+        {
+            // 回答表示中はnextボタンと同じ挙動
+            if (nextButton.Visible)
+            {
+                Next();
+            }
         }
     }
 }

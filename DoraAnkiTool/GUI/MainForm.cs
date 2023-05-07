@@ -26,6 +26,12 @@ namespace DoraAnkiTool.GUI
             {
                 Debug.WriteLine("単語：" + elem.Word + "　　　意味：" + elem.Mean);
             }
+            var r = a.Questions();
+            r = a.Questions();
+            r = a.Questions();
+            r = a.Questions();
+            r = a.Questions();
+            r = a.Questions();
         }
     }
 }

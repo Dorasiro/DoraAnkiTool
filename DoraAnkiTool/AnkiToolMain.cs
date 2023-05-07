@@ -75,7 +75,7 @@ namespace DoraAnkiTool
 
             var result = new ThemeDictionaly[4];
             var rnd = new Random();
-            var rndInt = rnd.Next(0, themeDictionalyList.Count-1);
+            var rndInt = rnd.Next(0, themeDictionalyList.Count);
 
             // 問題を１個ランダムで出力用の配列に移す
             result[0] = themeDictionalyList[rndInt];
@@ -88,7 +88,7 @@ namespace DoraAnkiTool
             var masterCopy = new List<ThemeDictionaly>(themeDictionalyMasterList);
             while (counter < 4)
             {
-                rndInt = rnd.Next(0, masterCopy.Count - 1);
+                rndInt = rnd.Next(0, masterCopy.Count);
                 // 正解ペアと同じものが選ばれていないかチェックする
                 if (masterCopy[rndInt].Word == result[0].Word)
                 {
